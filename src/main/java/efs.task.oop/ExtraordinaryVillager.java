@@ -1,19 +1,19 @@
 package efs.task.oop;
 
-public class ExtraordinaryVillager extends Villager {
+public class ExtraordinaryVillager extends Villager{
 
-    public enum Skill{
+    public enum Skill {
         IDENTIFY("I will identify items for you at no charge."),
         SHELTER("I can offer you poor shelter.");
 
-        private String s;
-        Skill(String s) {
-            this.s=s;
+        private final String description;
+
+        Skill(String description) {
+            this.description = description;
         }
 
-        @Override
-        public String toString() {
-            return this.s;
+        public String getDescription() {
+            return description;
         }
     }
 
@@ -21,20 +21,18 @@ public class ExtraordinaryVillager extends Villager {
 
     public ExtraordinaryVillager(String name, int age, Skill skill) {
         super(name, age);
-        this.skill=skill;
+        this.skill = skill;
     }
 
-    @Override
-    public void sayHello(){
-        System.out.println("Greetings traveler... I'm "+this.name +" and I'm " +this.age+" years old. "+skill);
+    public void sayHello() {
+        System.out.println("Greetings traveler... I'm " + name +  " and I'm " + age + " years old. " + skill.getDescription());
     }
 
-    @Override
     public void attack(Fighter victim) {
+        victim.takeHit(0);
     }
 
-    @Override
     public void takeHit(int damage) {
-        this.health=0;
+        health = 0;
     }
 }
