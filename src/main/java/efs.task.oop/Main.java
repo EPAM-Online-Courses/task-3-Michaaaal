@@ -1,9 +1,7 @@
 package efs.task.oop;
 
 public class Main {
-      
     public static void main(String[] args) {
-
         Villager kashya = new Villager("Kashya", 30);
         ExtraordinaryVillager akara = new ExtraordinaryVillager("Akara", 40, ExtraordinaryVillager.Skill.SHELTER);
         Villager gheed = new Villager("Gheed", 50);
@@ -17,7 +15,7 @@ public class Main {
         deckardCain.sayHello();
         warriv.sayHello();
         flawia.sayHello();
-            
+
         Object objectDeckardCain = deckardCain;
         Object objectAkara = akara;
 
@@ -36,7 +34,6 @@ public class Main {
             }
         }
         System.out.println("Obozowisko ocalone!");
-   
     }
 
     public static void fight(Villager villager, Monster monster) {
