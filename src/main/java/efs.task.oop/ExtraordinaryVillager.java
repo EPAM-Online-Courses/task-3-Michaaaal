@@ -17,7 +17,7 @@ public class ExtraordinaryVillager extends Villager {
         }
     }
 
-    private Skill skill;
+    private final Skill skill;
 
     public ExtraordinaryVillager(String name, int age, Skill skill) {
         super(name, age);
