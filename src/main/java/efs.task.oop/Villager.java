@@ -2,8 +2,6 @@ public class Villager implements Fighter{
     protected String name;
     protected int age;
 
-    private boolean isAlive;
-
     protected int health=100;
     public Villager(String name, int age) {
         this.name = name;
@@ -15,14 +13,6 @@ public class Villager implements Fighter{
         return name;
     }
 
-    public boolean isAlive() {
-        if(this.health>0){
-            isAlive=true;
-        }else{
-            isAlive=false;
-        }
-        return isAlive;
-    }
 
     public int getAge() {
         return age;
