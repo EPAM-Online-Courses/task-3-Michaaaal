@@ -22,13 +22,13 @@ public class Main {
         Object objectAkara = akara;
 
         while (Monsters.getMonstersHealth() > 0) {
-            if (Monsters.andariel.isAlive()) {
+            if (Monsters.andariel.getHealth() > 0) {
                 fight(kashya, Monsters.andariel);
                 fight(gheed, Monsters.andariel);
                 fight(warriv, Monsters.andariel);
                 fight(flawia, Monsters.andariel);
             }
-            if (Monsters.blacksmith.isAlive()) {
+            if (Monsters.blacksmith.getHealth() > 0) {
                 fight(kashya, Monsters.andariel);
                 fight(gheed, Monsters.andariel);
                 fight(warriv, Monsters.andariel);
