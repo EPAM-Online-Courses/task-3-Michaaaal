@@ -1,3 +1,5 @@
+package efs.task.oop;
+
 public class Villager implements Fighter{
     protected String name;
     protected int age;
